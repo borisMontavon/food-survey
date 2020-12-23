@@ -1,0 +1,13 @@
+[
+    { "id": 1, "value": "Apple" },
+    { "id": 2, "value": "Apricot" },
+    { "id": 3, "value": "Banana" },
+    { "id": 4, "value": "Cherry" },
+    { "id": 5, "value": "Grape" },
+    { "id": 6, "value": "Kiwi" },
+    { "id": 7, "value": "Mango" },
+    { "id": 8, "value": "Nectarine" },
+    { "id": 9, "value": "Pear" },
+    { "id": 10, "value": "Raspberry" },
+    { "id": 11, "value": "Strawberry" }
+]

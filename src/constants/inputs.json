@@ -1,0 +1,6 @@
+[
+    { "label": "First Name", "for": "fName", "class": "text-input", "type": "text", "id":"fName", "name": "fName", "placeholder": "Enter your first name", "key": 1 },
+    { "label": "Last Name", "for": "lName", "class": "text-input", "type": "text", "id":"lName", "name": "lName", "placeholder": "Enter your last name", "key": 2},
+    { "label": "Date of birth", "for": "dOfBirth", "class": "text-input js-dob", "type": "text", "id":"dOfBirth", "name": "dOfBirth", "placeholder": "dd/mm/yyyy", "key": 3},
+    { "label": "Mail", "for": "eMail", "class": "text-input", "type": "email", "id":"eMail", "name": "eMail", "placeholder": "Enter your email", "key": 4}
+]

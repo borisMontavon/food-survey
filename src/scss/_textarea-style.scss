@@ -1,0 +1,24 @@
+.input-textarea {
+  padding: 10px 15px;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  border-radius: 0.25rem;
+  border: 2px solid $jet;
+  background-color: $eerie_black_o;
+  color: $quick_silver;
+  transition: 0.15s ease-out;
+  font-family: $eb_garamond;
+  font-size: 0.9rem;
+
+  &:focus {
+    border-color: $caput_mortuum;
+    outline: 0;
+  }
+
+  @media screen and (min-width: $computer_breakpoint) {
+    resize: vertical !important;
+  }
+}

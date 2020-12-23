@@ -1,0 +1,53 @@
+/* -----Text input----- */
+
+.text-input {
+  padding: 15px 15px;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 2px solid $jet;
+  background-color: $eerie_black_o;
+  margin: 5px auto 25px auto;
+  color: $quick_silver;
+  transition: 0.15s ease-out;
+  font-family: $eb_garamond;
+  font-size: 0.9rem;
+
+  &:focus {
+    border-color: $caput_mortuum;
+    outline: 0;
+  }
+}
+
+/* -----Phone number----- */
+
+.iti__country-list {
+  background-color: $eerie_black;
+}
+
+.iti__dial-code {
+  color: $quick_silver;
+}
+
+.iti__country {
+  color: $quick_silver;
+
+  &:hover {
+    background-color: #2a73b9;
+    color: $white;
+
+    .iti__dial-code {
+      color: $white;
+    }
+  }
+}
+
+/* -----Country list----- */
+
+option {
+  color: $quick_silver;
+  background-color: $eerie_black;
+
+  &:hover {
+    color: $caput_mortuum !important;
+  }
+}

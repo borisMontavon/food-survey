@@ -1,0 +1,49 @@
+#top-button {
+  position: fixed;
+  overflow: hidden;
+  opacity: 0;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: $white_o;
+  color: $eerie_black;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition: 0.15s ease-out;
+
+  &:hover {
+    background-color: $white_o2;
+  }
+
+  @media screen and (min-width: $computer_breakpoint) {
+    bottom: 20px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: $white;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  i {
+    padding: 3px;
+
+    @media screen and (min-width: $computer_breakpoint) {
+      padding: 8px;
+    }
+  }
+}
+
+.fade {
+  opacity: 1 !important;
+}

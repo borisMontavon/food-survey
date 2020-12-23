@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box; }
+
+::selection {
+  text-shadow: none;
+  background-color: #9a360f;
+  color: #fff; }
+
+body {
+  height: 100%;
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none; }
+
+footer {
+  height: 40px; }
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(115deg, rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.85)), url("../assets/img/patrick-tomasso-GXXYkSwndP4-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.9rem;
+  margin: 2% auto 0;
+  color: #fff;
+  font-family: "EB Garamond", serif; }
+  @media screen and (min-width: 992px) {
+    h1 {
+      font-size: 4.25rem; } }
+
+.icon {
+  text-align: center; }
+  .icon i {
+    font-size: 1.8rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #fff; }
+    .icon i:nth-child(2) {
+      font-size: 2.5rem;
+      margin-top: 10px; }
+
+main {
+  display: flex;
+  flex-flow: row wrap; }
+
+.section-left {
+  width: 750px;
+  height: 100%;
+  margin: 5%;
+  background-color: #121213;
+  padding: 1.5rem;
+  border-radius: 0.45rem;
+  border: 3px solid #9a360f; }
+
+.section-right {
+  width: 465px;
+  height: 400px;
+  margin: 5%;
+  background-color: #121213;
+  padding: 1.5rem;
+  border-radius: 0.45rem;
+  border: 3px solid #9a360f; }
+
+form h3 {
+  margin-top: 0;
+  color: #fff;
+  font-family: "EB Garamond", serif; }
+
+form .firstH3 {
+  margin-bottom: 1.5rem; }
+
+form .clue {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-left: 5px; }
+
+form:not(:first-child) hr {
+  margin-top: 2rem; }
+
+.form-section-checkbox-radio {
+  margin: 1.5rem auto; }
+
+/* -----Labels style----- */
+label {
+  display: flex;
+  flex-flow: row wrap;
+  color: #fff;
+  font-family: "EB Garamond", serif; }
+
+.si {
+  cursor: pointer;
+  position: relative; }
+  .si .si-label {
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 3px; }
+
+.si-label {
+  position: absolute; }
+
+/* -----Text input----- */
+.text-input {
+  padding: 15px 15px;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: 2px solid #474747;
+  background-color: rgba(26, 26, 26, 0.85);
+  margin: 5px auto 25px auto;
+  color: #a3a3a3;
+  transition: 0.15s ease-out;
+  font-family: "EB Garamond", serif;
+  font-size: 0.9rem; }
+  .text-input:focus {
+    border-color: #9a360f;
+    outline: 0; }
+
+/* -----Phone number----- */
+.iti__country-list {
+  background-color: #1a1a1a; }
+
+.iti__dial-code {
+  color: #a3a3a3; }
+
+.iti__country {
+  color: #a3a3a3; }
+  .iti__country:hover {
+    background-color: #2a73b9;
+    color: #fff; }
+    .iti__country:hover .iti__dial-code {
+      color: #fff; }
+
+/* -----Country list----- */
+option {
+  color: #a3a3a3;
+  background-color: #1a1a1a; }
+  option:hover {
+    color: #9a360f !important; }
+
+.si {
+  padding: 10px 0; }
+  .si .si-label:hover::before {
+    border-color: #9a360f; }
+  .si .si-label::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #474747;
+    background-color: rgba(26, 26, 26, 0.85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg) scale(1); }
+  .si .si-label::after {
+    transition: all 0.2s ease-in-out; }
+  .si > input[type="checkbox"],
+  .si > input[type="radio"] {
+    clip-path: polygon(0 0); }
+
+/* -----Checkbox style----- */
+.si.si-checkbox .si-label::before {
+  border-radius: 3.5px; }
+
+.si.si-checkbox .si-label::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 18px;
+  border-width: 0 3.5px 3.5px 0;
+  border-style: solid;
+  border-color: transparent #9a360f #9a360f transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg) scale(0); }
+
+.si.si-checkbox > input:checked + .si-label::before {
+  transform: rotate(40deg) scale(0); }
+
+.si.si-checkbox > input:checked + .si-label::after {
+  left: 8px;
+  transform: rotate(40deg) scale(1); }
+
+/* -----Radio style----- */
+.si.si-radio .si-label::before {
+  border-radius: 100%;
+  top: 2px; }
+
+.si.si-radio .si-label::after {
+  border-radius: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 9px;
+  left: 7px; }
+
+.si.si-radio > input:checked + .si-label::before {
+  background-color: #9a360f; }
+
+.si.si-radio > input:checked + .si-label::after {
+  background-color: #fff;
+  height: 9px;
+  top: 9px; }
+
+.input-textarea {
+  padding: 10px 15px;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  border-radius: 0.25rem;
+  border: 2px solid #474747;
+  background-color: rgba(26, 26, 26, 0.85);
+  color: #a3a3a3;
+  transition: 0.15s ease-out;
+  font-family: "EB Garamond", serif;
+  font-size: 0.9rem; }
+  .input-textarea:focus {
+    border-color: #9a360f;
+    outline: 0; }
+  @media screen and (min-width: 992px) {
+    .input-textarea {
+      resize: vertical !important; } }
+
+button {
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 0.25rem;
+  color: #fff;
+  background-color: #9a360f;
+  border: 2px solid #9a360f;
+  cursor: pointer;
+  font-family: "EB Garamond", serif;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1; }
+
+#top-button {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #1a1a1a;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition: 0.15s ease-out; }
+  #top-button:hover {
+    background-color: rgba(255, 255, 255, 0.8); }
+  @media screen and (min-width: 992px) {
+    #top-button {
+      bottom: 20px;
+      right: 30px;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff; }
+      #top-button:hover {
+        background-color: rgba(0, 0, 0, 0.8); } }
+  #top-button i {
+    padding: 3px; }
+    @media screen and (min-width: 992px) {
+      #top-button i {
+        padding: 8px; } }

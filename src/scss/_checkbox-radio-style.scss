@@ -1,0 +1,112 @@
+.si {
+  padding: 10px 0;
+
+  .si-label {
+    &:hover {
+      &::before {
+        border-color: $caput_mortuum;
+      }
+    }
+
+    &::before {
+      transition: all 0.2s ease-in-out;
+      content: "";
+      display: block;
+      width: $input-size;
+      height: $input-size;
+      border: $border-size-box solid $jet;
+      background-color: rgba(26, 26, 26, 0.85);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(0deg) scale(1);
+    }
+
+    &::after {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  & > input[type="checkbox"],
+  & > input[type="radio"] {
+    clip-path: polygon(0 0);
+  }
+}
+
+/* -----Checkbox style----- */
+
+.si {
+  &.si-checkbox {
+    .si-label {
+      &::before {
+        border-radius: $border-size-checkmark;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 18px;
+        border-width: 0 $border-size-checkmark $border-size-checkmark 0;
+        border-style: solid;
+        border-color: transparent $caput_mortuum $caput_mortuum transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate($rotate-default) scale(0);
+      }
+    }
+
+    & > input {
+      &:checked {
+        & + .si-label {
+          &::before {
+            transform: rotate($rotate-active) scale(0);
+          }
+
+          &::after {
+            left: 8px;
+            transform: rotate($rotate-active) scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -----Radio style----- */
+
+.si {
+  &.si-radio {
+    .si-label {
+      &::before {
+        border-radius: 100%;
+        top: 2px;
+      }
+      &::after {
+        border-radius: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 9px;
+        left: 7px;
+      }
+    }
+
+    & > input {
+      &:checked {
+        & + .si-label {
+          &::before {
+            background-color: $caput_mortuum;
+          }
+
+          &::after {
+            background-color: $white;
+            height: 9px;
+            top: 9px;
+          }
+        }
+      }
+    }
+  }
+}

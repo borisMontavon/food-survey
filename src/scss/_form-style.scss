@@ -1,0 +1,51 @@
+form {
+  h3 {
+    margin-top: 0;
+    color: $white;
+    font-family: $eb_garamond;
+  }
+
+  .firstH3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .clue {
+    color: $white;
+    font-size: 0.9rem;
+    margin-left: 5px;
+  }
+
+  &:not(:first-child) {
+    hr {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.form-section-checkbox-radio {
+  margin: 1.5rem auto;
+}
+
+/* -----Labels style----- */
+
+label {
+  display: flex;
+  flex-flow: row wrap;
+  color: $white;
+  font-family: $eb_garamond;
+}
+
+.si {
+  cursor: pointer;
+  position: relative;
+
+  .si-label {
+    display: inline-block;
+    padding-left: $guter;
+    padding-top: 3px;
+  }
+}
+
+.si-label {
+  position: absolute;
+}

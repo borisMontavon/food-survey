@@ -1,0 +1,15 @@
+button {
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 0.25rem;
+  color: $white;
+  background-color: $caput_mortuum;
+  border: 2px solid $caput_mortuum;
+  cursor: pointer;
+  font-family: $eb_garamond;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+}

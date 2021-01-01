@@ -58,21 +58,13 @@ h1 {
 
 main {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  position: relative; }
 
 .section-left {
   width: 750px;
   height: 100%;
-  margin: 5%;
-  background-color: #121213;
-  padding: 1.5rem;
-  border-radius: 0.45rem;
-  border: 3px solid #9a360f; }
-
-.section-right {
-  width: 465px;
-  height: 400px;
-  margin: 5%;
+  margin: 2% 5% 5%;
   background-color: #121213;
   padding: 1.5rem;
   border-radius: 0.45rem;
@@ -256,10 +248,33 @@ button {
   transition: 0.5s;
   z-index: 1; }
 
+.section-right {
+  width: 465px;
+  height: 100%;
+  margin: 2% 5% 5%;
+  background-color: #121213;
+  padding: 1.5rem;
+  border-radius: 0.45rem;
+  border: 3px solid #9a360f;
+  position: sticky;
+  top: 30px;
+  color: #fff;
+  font-family: "EB Garamond", serif; }
+
+h3 {
+  margin-bottom: 1.5rem;
+  text-align: center; }
+
+.right_hr {
+  margin: 1rem 0; }
+
+p {
+  word-wrap: break-word; }
+
 #top-button {
-  display: none;
   position: fixed;
   overflow: hidden;
+  opacity: 0;
   bottom: 10px;
   right: 10px;
   z-index: 99;
@@ -292,3 +307,6 @@ button {
     @media screen and (min-width: 992px) {
       #top-button i {
         padding: 8px; } }
+
+.fade {
+  opacity: 1 !important; }

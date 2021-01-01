@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { valueChange } from '../../actions/config';
 import countries from '../../constants/countries.json';
 
 class CountryInput extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      selectedId: 75
-    }
-  }
-
-  dropdownChanged(e) {
-    this.setState({selectedId: e.target.value});
-  }
     
-  listCountries() {
+  handleChange(e) {
+    const { dispatch } = this.props;
 
+    dispatch(valueChange(e.target.id, e.target.value));
+  }
+  
+  listCountries() {
     return countries.map((item) => 
-        <option key={item.id} value={item.code}>{item.value}</option>
+      <option key={item.id} value={item.value}>{item.value}</option>
     );
   }
   
@@ -28,8 +24,8 @@ class CountryInput extends Component {
       <div>
           <label>
               Country
-              <select className="text-input" id="country" name="country" value={this.selectedId} defaultValue={''} 
-              onChange={this.dropdownChanged.bind(this)} required>
+              <select className="text-input" id="country" name="country" defaultValue={''} 
+              onChange={(e) => this.handleChange(e)} required>
                   <option value='' disabled >Select your country</option>
                   { list }
               </select>
@@ -39,4 +35,10 @@ class CountryInput extends Component {
   }
 }
 
-export default CountryInput;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatch
+    };
+}
+
+export default connect(mapDispatchToProps)(CountryInput);

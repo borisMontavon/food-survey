@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { checkboxChange } from '../../actions/config';
 import $ from 'jquery';
 import H3Component from '../H3Component';
 import desserts from '../../constants/desserts.json';
@@ -8,15 +10,18 @@ class DessertsChoices extends Component {
     componentDidMount() {
         window.$ = $;
 
-        $('input[name="dessert"]').on('change', function() {
+        const { dispatch } = this.props;
+
+        $('input[name="dessert"]').on('change', function(e) {
             if($('input[name="dessert"]:checked').length > 2) {
                 this.checked = false;
             }
+
+            dispatch(checkboxChange(e.target.name, e.target.value, e.target.checked));
         });
     }
     
     listDesserts() {
-
         return desserts.map((item) => 
             <label className="si si-checkbox" key={item.id} >
                 <input type="checkbox" id={item.id} name="dessert" value={item.value} />
@@ -37,4 +42,10 @@ class DessertsChoices extends Component {
     }
 }
 
-export default DessertsChoices;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatch
+    };
+}
+
+export default connect(mapDispatchToProps)(DessertsChoices);

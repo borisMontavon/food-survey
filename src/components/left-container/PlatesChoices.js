@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { checkboxChange } from '../../actions/config';
 import $ from 'jquery';
 import H3Component from '../H3Component';
 import plates from '../../constants/plates.json';
@@ -8,15 +10,18 @@ class PlatesChoices extends Component {
     componentDidMount() {
         window.$ = $;
 
-        $('input[name="plate"]').on('change', function() {
+        const { dispatch } = this.props;
+
+        $('input[name="plate"]').on('change', function(e) {
             if($('input[name="plate"]:checked').length > 2) {
                 this.checked = false;
             }
+
+            dispatch(checkboxChange(e.target.name, e.target.value, e.target.checked));
         });
     }
 
     listPlates() {
-        
         return plates.map((item) =>
             <label className="si si-checkbox" key={item.id} >
                 <input type="checkbox" id={item.id} name="plate" value={item.value} />
@@ -37,4 +42,10 @@ class PlatesChoices extends Component {
     }
 }
 
-export default PlatesChoices;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatch
+    };
+}
+
+export default connect(mapDispatchToProps)(PlatesChoices);

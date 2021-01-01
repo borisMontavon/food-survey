@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+import { connect } from 'react-redux';
+import { checkboxChange } from '../../actions/config';
 import H3Component from '../H3Component';
 import drinks from '../../constants/drinks.json';
 
 class DrinksChoices extends Component {
 
-    componentDidMount() {
-        window.$ = $;
+    handleChange(e) {
+        const { dispatch } = this.props;
 
-        $('input[type="radio"]').on('change', function() {
-            if($('input[type="radio"]:checked').length > 1) {
-                this.checked = false;
-            }
-        });
+        dispatch(checkboxChange(e.target.name, e.target.value, e.target.checked));
     }
 
     listDrinks() {
-        
         return drinks.map((item) =>
             <label className="si si-radio" key={item.id} >
-                <input type="radio" id={item.id} name="drink" value={item.value} />
+                <input type="radio" id={item.id} name="drink" value={item.value} onChange={(e) => this.handleChange(e)} />
                 <span className="si-label">{item.value}</span>
             </label>
         );
@@ -37,4 +33,10 @@ class DrinksChoices extends Component {
     }
 }
 
-export default DrinksChoices;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatch
+    };
+}
+
+export default connect(mapDispatchToProps)(DrinksChoices);

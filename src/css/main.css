@@ -257,9 +257,9 @@ button {
   z-index: 1; }
 
 #top-button {
-  display: none;
   position: fixed;
   overflow: hidden;
+  opacity: 0;
   bottom: 10px;
   right: 10px;
   z-index: 99;
@@ -292,3 +292,6 @@ button {
     @media screen and (min-width: 992px) {
       #top-button i {
         padding: 8px; } }
+
+.fade {
+  opacity: 1 !important; }

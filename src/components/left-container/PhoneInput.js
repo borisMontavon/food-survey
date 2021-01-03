@@ -16,7 +16,7 @@ class PhoneInput extends Component {
             <div>
                 <label>
                     Phone number
-                    <input className="text-input" type="tel" id="telNum" name="telNum" placeholder="caca" onChange={(e) => this.handleChange(e)} />
+                    <input className="text-input" type="tel" id="telNum" name="telNum" onChange={(e) => this.handleChange(e)} />
                 </label>
             </div>
         )

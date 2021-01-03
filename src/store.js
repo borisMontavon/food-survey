@@ -1,8 +1,28 @@
-// import { createStore } from 'redux';
+import { createStore } from 'redux';
+import rootReducers from './reducers/combine';
 
-// const store = createStore(
-//     rootReducers,
-//     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()    
-// );
+const initialState = {
+    'inputValuesReducer': {
+        'fName': '',
+        'lName': '',
+        'dOfBirth': '',
+        'eMail': '',
+        'telNum': '',
+        'country': '',
+        'perfectMeal': ''
+    },
+    'checkboxValuesReducer': {
+        'plates': [],
+        'desserts': [],
+        'fruits': [],
+        'drinks': ''
+    }
+};
 
-// export default store;
+const store = createStore(
+    rootReducers,
+    initialState,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()    
+);
+
+export default store;

@@ -48,24 +48,19 @@ h1 {
 main {
   display: flex;
   flex-flow: row wrap;
+  position: relative;
 }
 
 .section-left {
   width: 750px;
   height: 100%;
-  margin: 5%;
+  margin: 2% 5% 5%;
   background-color: $rich_black;
   padding: 1.5rem;
   border-radius: 0.45rem;
-  border: 3px solid $caput_mortuum;
-}
+  border: 2px solid $caput_mortuum;
 
-.section-right {
-  width: 465px;
-  height: 400px;
-  margin: 5%;
-  background-color: $rich_black;
-  padding: 1.5rem;
-  border-radius: 0.45rem;
-  border: 3px solid $caput_mortuum;
+  @media screen and (min-width: $computer_breakpoint) {
+    margin: 2% 5% 2% auto;
+  }
 }

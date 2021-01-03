@@ -1,0 +1,31 @@
+.section-right {
+  width: 100%;
+  height: 100%;
+  margin: 2% 5% 5%;
+  background-color: $rich_black;
+  padding: 1.5rem;
+  border-radius: 0.45rem;
+  border: 2px solid $caput_mortuum;
+  position: sticky;
+  top: 30px;
+  color: $white;
+  font-family: $eb_garamond;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    margin: 2% auto 2% 5%;
+    width: 465px;
+  }
+}
+
+h3 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.right_hr {
+  margin: 1rem 0;
+}
+
+p {
+  word-wrap: break-word;
+}

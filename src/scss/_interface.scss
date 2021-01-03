@@ -58,5 +58,9 @@ main {
   background-color: $rich_black;
   padding: 1.5rem;
   border-radius: 0.45rem;
-  border: 3px solid $caput_mortuum;
+  border: 2px solid $caput_mortuum;
+
+  @media screen and (min-width: $computer_breakpoint) {
+    margin: 2% 5% 2% auto;
+  }
 }

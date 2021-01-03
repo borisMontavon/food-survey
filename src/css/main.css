@@ -68,7 +68,10 @@ main {
   background-color: #121213;
   padding: 1.5rem;
   border-radius: 0.45rem;
-  border: 3px solid #9a360f; }
+  border: 2px solid #9a360f; }
+  @media screen and (min-width: 992px) {
+    .section-left {
+      margin: 2% 5% 2% auto; } }
 
 form h3 {
   margin-top: 0;
@@ -249,17 +252,21 @@ button {
   z-index: 1; }
 
 .section-right {
-  width: 465px;
+  width: 100%;
   height: 100%;
   margin: 2% 5% 5%;
   background-color: #121213;
   padding: 1.5rem;
   border-radius: 0.45rem;
-  border: 3px solid #9a360f;
+  border: 2px solid #9a360f;
   position: sticky;
   top: 30px;
   color: #fff;
   font-family: "EB Garamond", serif; }
+  @media screen and (min-width: 992px) {
+    .section-right {
+      margin: 2% auto 2% 5%;
+      width: 465px; } }
 
 h3 {
   margin-bottom: 1.5rem;
